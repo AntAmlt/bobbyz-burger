@@ -1,0 +1,169 @@
+/* ===== */
+/* HTML */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+main {
+    background-color: rgb(218, 218, 218);
+}
+
+/* ===== */
+/* FONTS & SIZES */
+
+* {
+    font-family: 'Vollkorn', serif;
+}
+
+h2 {
+    font-size: calc(1vw + 15px);
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.new {
+    font-size: calc(1vw + 40px);
+}
+
+/* ===== */
+/* COLORS */
+
+/* 
+    Colors :
+        - Red : #ad372d
+        - Brown :
+        - Black :
+*/
+
+/* ===== */
+/* COMPONENTS */
+
+main > * {
+    padding: 0 5%;
+}
+
+nav ul, #network {
+    list-style-type: none;
+}
+
+/* BACKGROUNDS */
+
+#new-burger {
+    height: 100vh;
+    background-image: url("../img/mbuAd.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 5%;
+}
+
+#introduction {
+    background-color: rgb(11, 11, 11);
+    color: white;
+    padding: 50px 0;
+}
+
+#introduction blockquote {
+    line-height: 2;
+}
+
+#megadefi {
+    background-color: #ad372d;
+}
+
+.engagement-card {
+    padding: 20px 0;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.engagement-card p {
+    margin: 0;
+}
+
+.engagement-card:hover > .iconify {
+    color: #ad372d;
+}
+
+.btn-link {
+    padding: 10px 20px;
+    color: white;
+    background-color: #ad372d;
+    border: 2px solid #ad372d;
+    text-decoration: none;
+    transition: 0.3s all ease-in;
+}
+
+.btn-link:hover {
+    background: none;
+    color: #ad372d;
+}
+
+figcaption {
+    text-align: end;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-content {
+    padding: 20px 0;
+    background-color: rgb(21, 21, 21);
+    color: white;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer-logo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: small;
+    width: 150px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease-in all;
+}
+
+footer a:hover {
+    color: #ad372d;
+}
+
+#footer-prevention {
+    text-align: center;
+    font-size: small;
+    background-color: #f1f1f1;
+    color: gray;
+    margin: 0;
+    padding: 10px 0;
+}
+

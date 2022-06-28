@@ -1,0 +1,114 @@
+@media screen and (min-width: 1024px) {
+
+    header {
+        position: fixed;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 75px;
+    }
+
+    #header-logo, #header-logo img {
+        height: 75px;
+    }
+
+    #header-logo {
+        border: 5px solid #ad372d;
+    }
+
+    header * {
+        display: flex;
+        color: white;
+    }
+
+    header ul {
+        height: 75px;
+        margin: 0;
+    }
+
+    header a {
+        display: flex;
+        align-items: center;
+        transition: 0.2s ease-out all;
+    }
+
+    header a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .nav-active {
+        border-bottom: 5px solid #ad372d;
+    }
+
+    #header-nav li {
+        margin: 0 20px;
+        height: 100%;
+    }
+
+    header a:hover {
+        color: #ad372d;
+    }
+
+    #networks li {
+        margin: 0 10px;
+        height: 100%;
+    }
+
+    #header-nav {
+        display: flex;
+        align-items: center;
+        margin-left: 10%;
+    } 
+
+    #networks {
+        margin-right: 10%;
+    }
+
+    #ceo-speech {
+        padding: 0 10%;
+        display: flex;
+        align-items: center;
+        font-size: larger;
+        text-align: justify;
+    }
+
+    #ceo-picture {
+        height: 60vh;
+        width: fit-content;
+    }
+    
+    #ceo-picture img {
+        max-height: 100%;
+        width: auto;
+    }
+
+    #engagements {
+        padding: 30px 10%;
+    }
+
+    #engagements-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+    
+    #megadefi {
+        padding: 30px 10%;
+        align-items: center;
+        background-image: url("../img/mbuAd.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+
+    #megadefi-content {
+        background-color: rgba(61, 61, 61, 0.7);
+        text-align: justify;
+        font-size: large;
+        line-height: 1.5;
+        padding: 30px 20px;
+    }
+}
