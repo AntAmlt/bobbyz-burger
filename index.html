@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500&display=swap" rel="stylesheet">
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-
+    <script src="/js/app.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/large.css">
     <link rel="stylesheet" href="css/small.css">
@@ -151,18 +151,9 @@
         </div>
 
         <p id="footer-prevention">
-            Pour votre santé, mangez <strike>au moins 5 fruits et légumes par jour</strike> chez <strong>BZB</strong> !
+            Pour votre santé, mangez <s>au moins 5 fruits et légumes par jour</s> chez <strong>BZB</strong> !
         </p>
 
     </footer>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            let header = document.querySelector('header');
-            let windowPosition = window.scrollY > 0;
-            header.classList.toggle('scrolling-active', windowPosition);
-        })
-    </script>
-    
 </body>
 </html>
