@@ -1,16 +1,44 @@
 @media screen and (min-width: 1024px) {
 
+    .nav-active {
+        border-bottom: 5px solid #ad372d;
+    }
+
+    header > * {
+        height: 75px;
+        transition: all .5s ease;
+    }
+
+    .scrolling-active {
+        background-color: #ad372d;
+        color: white;
+    }
+
+    .scrolling-active > * {
+        height: 50px;
+    }
+
+    .scrolling-active #header-logo, .scrolling-active .nav-active {
+        border: none;
+    }
+
+    .scrolling-active a:hover {
+        color: rgb(22,22,22);
+    }
+
+
+
     header {
         position: fixed;
         width: 100vw;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 75px;
     }
 
     #header-logo, #header-logo img {
-        height: 75px;
+        height: 100%;
+        /* height: 75px; */
     }
 
     #header-logo {
@@ -23,7 +51,7 @@
     }
 
     header ul {
-        height: 75px;
+        height: 100%;
         margin: 0;
     }
 
@@ -39,16 +67,13 @@
         height: 100%;
     }
 
-    .nav-active {
-        border-bottom: 5px solid #ad372d;
-    }
-
     #header-nav li {
         margin: 0 20px;
         height: 100%;
     }
 
-    header a:hover {
+    
+    header a:hover, #networks span:hover {
         color: #ad372d;
     }
 

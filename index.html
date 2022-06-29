@@ -37,9 +37,7 @@
             <li><a href="#">
                 <span class="iconify" data-icon="entypo-social:facebook"></span>
             </a></li>
-            <li><a href="#">
-                <span class="iconify" data-icon="akar-icons:instagram-fill"></span>
-            </a></li>
+            <li><a href="#"><span class="iconify" data-icon="akar-icons:instagram-fill"></span></a></li>
         </ul>
 
     </header>
@@ -56,7 +54,7 @@
 
         </section>
 
-        <section id="introduction">
+        <section id="introduction" class="bg-black">
 
             <h2>On vous en met plein le bide !</h2>
 
@@ -109,17 +107,16 @@
 
         </section>
 
-        <section id="megadefi">
-
-            <h2>Les samedis, c'est MégaDéfi</h2>
+        <section id="megadefi" class="bg-red">
 
             <div id="megadefi-content">
 
+                <h2>... Et tous les samedis, c'est MEGADEFI !</h2>
                 
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis quam eius quas repellat laborum inventore cumque exercitationem tenetur iure minus animi alias quasi a, possimus doloremque facere aperiam, iusto magni.
-                    Autem voluptate vitae minus maiores. Accusamus vero reiciendis nesciunt laboriosam fugiat repellendus quam esse sit veritatis quia est repellat unde ea commodi nobis, illo in? Nemo eum numquam sapiente doloremque.
-                    Asperiores laboriosam repellendus ipsam explicabo repudiandae. Exercitationem dolore quaerat expedita debitis quae veniam eligendi, architecto rerum dolorem quas esse odio provident atque aspernatur, dicta libero nisi! Suscipit distinctio molestias tenetur.
+                    Tous les samedis, nous préparons un sandwich de la taille d'une grosse voiture que nous livrons sur le parking des restaurants BZB.
+                    Venez relever le défi ! Si vous arrivez à terminer le sandwich avant minuit, c'est gratuit. Mai si vous échouez, vous réglez ! Pensez
+                au gâchis que ce serait si personne n'osait tenter sa chance ! Alors, venez ! On compte sur vous !
                 </p>
 
             </div>
@@ -130,7 +127,7 @@
 
     <footer>
 
-        <div id="footer-content">
+        <div id="footer-content" class="bg-black">
 
             <div id="footer-logo">
                 <img src="img/logo.png" alt="Logo BZB">
@@ -138,7 +135,7 @@
             </div>
 
             <div id="copyright">
-                Copyright <a href="#">Antoine Ameloot</a> 2022.
+                Copyright <a href="https://github.com/AntAmlt">Antoine Ameloot</a> 2022.
             </div>
 
             <nav id="footer-nav">
@@ -158,6 +155,14 @@
         </p>
 
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition);
+        })
+    </script>
     
 </body>
 </html>
