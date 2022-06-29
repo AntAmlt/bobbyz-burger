@@ -10,6 +10,7 @@
     }
 
     .scrolling-active {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         background-color: #ad372d;
         color: white;
     }
@@ -27,6 +28,9 @@
     }
 
 
+    #contact-form {
+        margin: 0 20%;
+    }
 
     header {
         position: fixed;
@@ -34,6 +38,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        z-index: 10000;
     }
 
     #header-logo, #header-logo img {
@@ -135,5 +140,13 @@
         font-size: large;
         line-height: 1.5;
         padding: 30px 20px;
+    }
+
+    #location {
+        display: flex;
+    }
+
+    #map, #location-content {
+        width: 50%;
     }
 }

@@ -23,8 +23,11 @@ main {
     font-family: 'Vollkorn', serif;
 }
 
-h2 {
+h2, .title-section {
     font-size: calc(1vw + 15px);
+}
+
+h2 {
     text-align: center;
 }
 
@@ -32,8 +35,16 @@ nav a {
     text-decoration: none;
 }
 
-.new {
+.new, .title-section h1 {
     font-size: calc(1vw + 40px);
+}
+
+.title-section {
+    /* font-size: calc(1vw + 40px); */
+}
+
+#introduction blockquote {
+    line-height: 2;
 }
 
 /* ===== */
@@ -43,13 +54,36 @@ nav a {
     Colors :
         - Red : #ad372d
         - Brown :
-        - Black :
+        - Black : rgb(22,22,22)
 */
+
+.bg-red {
+    background-color: #ad372d;
+    color: white;
+}
+
+.bg-black {
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
+
+.title-section {
+    color: white;
+}
+
+#footer-prevention {
+    background-color: #f1f1f1;
+    color: gray;
+}
 
 /* ===== */
 /* COMPONENTS */
 
-main > * {
+. {
+    margin: 0;
+}
+
+main > :not(.no-margin) {
     padding: 0 5%;
 }
 
@@ -57,31 +91,52 @@ nav ul, #network {
     list-style-type: none;
 }
 
+figcaption {
+    text-align: end;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.input-group input, .input-group textarea {
+    min-height: 30px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+
+.input-group label {
+    margin-left: 5px;
+}
+
 /* BACKGROUNDS */
 
+.title-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 #new-burger {
-    height: 100vh;
     background-image: url("../img/mbuAd.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0 5%;
+}
+
+#contact-title {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.319), rgba(0, 0, 0, 0.074)),url("../img/contact.jpg");
 }
 
 #introduction {
-    background-color: rgb(11, 11, 11);
-    color: white;
     padding: 50px 0;
 }
 
-#introduction blockquote {
-    line-height: 2;
-}
+
 
 #megadefi {
     background-color: #ad372d;
@@ -107,7 +162,7 @@ nav ul, #network {
     color: #ad372d;
 }
 
-.btn-link {
+.btn-link, button {
     padding: 10px 20px;
     color: white;
     background-color: #ad372d;
@@ -116,13 +171,13 @@ nav ul, #network {
     transition: 0.3s all ease-in;
 }
 
-.btn-link:hover {
+.btn-link:hover, button:hover {
     background: none;
     color: #ad372d;
 }
 
-figcaption {
-    text-align: end;
+button {
+    padding: 10px 40px;
 }
 
 footer {
@@ -132,8 +187,6 @@ footer {
 
 #footer-content {
     padding: 20px 0;
-    background-color: rgb(21, 21, 21);
-    color: white;
     display: flex;
     flex-flow: wrap;
     justify-content: space-around;
@@ -158,12 +211,39 @@ footer a:hover {
     color: #ad372d;
 }
 
+/* ===== */
+/* PLACEMENT */
+
+.title-section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#new-burger {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 5%;
+}
+
 #footer-prevention {
     text-align: center;
     font-size: small;
-    background-color: #f1f1f1;
-    color: gray;
     margin: 0;
     padding: 10px 0;
 }
 
+#contact-form {
+    padding: 30px 0;
+}
+
+#location-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
