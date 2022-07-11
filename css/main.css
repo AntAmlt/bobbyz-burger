@@ -79,10 +79,6 @@ nav a {
 /* ===== */
 /* COMPONENTS */
 
-. {
-    margin: 0;
-}
-
 main > :not(.no-margin) {
     padding: 0 5%;
 }
@@ -112,6 +108,52 @@ figcaption {
     margin-left: 5px;
 }
 
+input, textarea {
+    padding-left: 5px;
+}
+
+.item-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 200px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: transform .2s;
+}
+
+.item-card img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: fit-content;
+}
+
+.item-card h3, .item-card small {
+    text-align: center;
+    margin: 10px 10px;
+}
+
+.item-card:hover {
+    transform: scale(1.1);
+}
+
+.item-price {
+    background-color: #ad372d;
+    padding: 10px 0 10px 20px;
+    color: white;
+    transition: 0.2s ease all;
+}
+
+.item-price:hover {
+    background-color: #ad382dcf;
+}
+
+.item-card-text {
+    padding: 0 5px;
+}
+
 /* BACKGROUNDS */
 
 .title-section {
@@ -127,9 +169,21 @@ figcaption {
     color: white;
 }
 
+#restaurants-title {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.6)),url("../img/restaurants.jpg");
+}
+
 #contact-title {
     background-image:
     linear-gradient(rgba(0, 0, 0, 0.319), rgba(0, 0, 0, 0.074)),url("../img/contact.jpg");
+}
+
+#menu-title {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.319), rgba(0, 0, 0, 0.074)),url("../img/menu.jpg");
+    background-position: center;
+    
 }
 
 #introduction {
@@ -246,4 +300,14 @@ footer a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#menu-content {
+    padding: 75px 0;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 25px;
 }

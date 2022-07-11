@@ -149,4 +149,23 @@
     #map, #location-content {
         width: 50%;
     }
+
+    .menu-row {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    .category-title {
+        flex-grow: 1;
+    }
+
+    .category-title h2 {
+        position: sticky;
+        margin-bottom: 0;
+        top: 75px;
+    }
+
+    .menu-grid {
+        width: 80%;
+    }
 }
