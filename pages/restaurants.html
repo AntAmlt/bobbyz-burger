@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/large.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <script src="/js/app.js"></script>
+    <title>Bobby Z Burger - Nos restaurants</title>
+</head>
+<body>
+
+    <header>
+
+        <nav id="header-nav">
+
+            <div id="header-logo">
+                <img src="../img/logo.png" alt="Logo BZB">
+            </div>
+
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li class="nav-active"><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+
+        <ul id="networks">
+            <li><a href="#">
+                <span class="iconify" data-icon="entypo-social:facebook"></span>
+            </a></li>
+            <li><a href="#"><span class="iconify" data-icon="akar-icons:instagram-fill"></span></a></li>
+        </ul>
+
+    </header>
+
+    <main>
+
+        <section class="title-section" id="restaurants-title">
+
+            Nos restaurants innondent les continents.
+
+            <h1>V'nez manger chez nous !</h1>
+
+        </section>
+
+        <section class="bg-black" id="restaurants-speech">
+            <h2>Il y a toujours un restaurant BZB près de chez vous</h2>
+            <p>Chez Bobby Z Burger, notre volonté, c'est la proximité. Nous cherchons constamment à 
+                implanter de nouveaux établissements sur tout le globe pour que chaque foyer puisse 
+                se délecter d'un de nos déliiiiicieux burgers.<br>
+                Ainsi, chaque habitation est située à moins de 15 minutes d'un de nos restaurants.
+                Que ce soit l'appartement de centre ville ou le pauvre cabanon de jardin
+                de la campagne paumée. N'attendez plus ! V'nez vite nous rendre visite !
+            </p>
+        </section>
+
+        <section id="restaurants-map" class="no-margin">
+
+            <div id="map" style="min-height: 600px; width: 100%;"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div id="footer-content" class="bg-black">
+
+            <div id="footer-logo">
+                <img src="../img/logo.png" alt="Logo BZB">
+                <strong>C'est beau mais c'est gras</strong>
+            </div>
+
+            <div id="copyright">
+                Copyright <a href="https://github.com/AntAmlt">Antoine Ameloot</a> 2022.
+            </div>
+
+            <nav id="footer-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+
+        <p id="footer-prevention">
+            Pour votre santé, mangez <s>au moins 5 fruits et légumes par jour</s> chez <strong>BZB</strong> !
+        </p>
+
+    </footer>
+
+    <script>
+
+        var marker = L.icon({
+            iconUrl: '/img/marker.png',
+        
+            iconSize:     [30, 42.15], // size of the icon
+            iconAnchor:   [15, 42.15] // point of the icon which will correspond to marker's location
+        });
+        
+        var us = [37.090240, -95.712891];
+        // création de la map
+        var map = L.map('map').setView(us, 4.5);
+        
+        // création du calque images
+        L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+              }).addTo(map);
+        
+        // ajout d'un markeur
+        var marker = L.marker(ny, {icon: marker}).addTo(map);
+        
+        // ajout d'un popup
+        marker.bindPopup('<h3> Bobby Z Burger </h3>');
+        
+    </script>
+    
+</body>
+</html>
