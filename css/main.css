@@ -186,6 +186,12 @@ input, textarea {
     
 }
 
+#mbu-title {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.319), rgba(0, 0, 0, 0.074)),url("../img/mbuAd.jpg");
+    background-position: right;
+}
+
 #introduction {
     padding: 50px 0;
 }
@@ -315,4 +321,10 @@ footer a:hover {
 #restaurants-speech {
     padding: 25px 0;
     text-align: justify;
+}
+
+#mbu-presentation {
+    width: 90%;
+    text-align: justify;
+    padding-bottom: 50px;
 }

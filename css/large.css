@@ -97,6 +97,11 @@
         margin-right: 10%;
     }
 
+    .two-col-text {
+        column-count: 2;
+        column-gap: 50px;
+    }
+
     #ceo-speech {
         padding: 0 10%;
         display: flex;
@@ -134,7 +139,7 @@
         color: white;
     }
 
-    #megadefi-content {
+    .jumbotron {
         background-color: rgba(61, 61, 61, 0.7);
         text-align: justify;
         font-size: large;
